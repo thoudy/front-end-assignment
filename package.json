@@ -7,8 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server",
     "build": "webpack",
-    "run-client": "cd ./client && ng serve",
-    "run-both": "start node server.js & start npm run-script run-client"
+    "client": "cd ./client && ng serve",
+    "run-both": "start node server.js & start npm run-script client",
+    "client-build": "cd ./client && ng build",
+    "client-test": "cd ./client && ng test"
   },
   "author": "STP",
   "license": "UNLICENSED",
