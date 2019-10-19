@@ -3,15 +3,21 @@ import { AppComponent } from './app.component';
 import { AppMainComponent } from './shared/components/main/main.component';
 import { AppHeaderComponent } from './shared/components/header/header.component';
 import { AppFooterComponent } from './shared/components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ArticlesModule } from './articles/articles.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        HttpClientModule,
+        ArticlesModule
+      ],
       declarations: [
         AppComponent,
         AppMainComponent,
         AppHeaderComponent,
-        AppFooterComponent
+        AppFooterComponent,
       ],
     }).compileComponents();
   }));
@@ -22,7 +28,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'client'`, () => {
+  it(`should have correct title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Awesome article app!');

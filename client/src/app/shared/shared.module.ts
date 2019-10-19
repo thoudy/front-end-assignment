@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 import { AppFooterComponent } from './components/footer/footer.component';
 import { AppMainComponent } from './components/main/main.component';
 import { AppHeaderComponent } from './components/header/header.component';
+import { ArticlesModule } from '../articles/articles.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppHeaderComponent,
-    AppMainComponent,
     AppFooterComponent,
+    AppMainComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ArticlesModule,
+    HttpClientModule,
   ],
   exports: [
     AppHeaderComponent,
