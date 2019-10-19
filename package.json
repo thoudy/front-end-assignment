@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "client": "cd ./client && ng serve",
+    "run-both": "start node server.js & npm run-script client",
+    "client-build": "cd ./client && ng build",
+    "client-test": "cd ./client && ng test"
   },
   "author": "STP",
   "license": "UNLICENSED",
