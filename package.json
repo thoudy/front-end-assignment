@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server",
     "build": "webpack",
     "client": "cd ./client && ng serve",
-    "run-both": "start node server.js & start npm run-script client",
+    "run-both": "start node server.js & npm run-script client",
     "client-build": "cd ./client && ng build",
     "client-test": "cd ./client && ng test"
   },
