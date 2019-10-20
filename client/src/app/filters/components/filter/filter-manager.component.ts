@@ -10,7 +10,7 @@ import { FilterType } from '../../models/filter-type.model';
 export class FilterManagerComponent implements OnInit, OnDestroy {
 
   private filters: FilterType[] = [];
-  private dataSource: string = "Data Sources";
+  private dataSource: string = "Data sources:";
   
   constructor(private filtersService: FiltersService) {
     this.subscribeToFilterDataStream();
