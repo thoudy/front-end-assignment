@@ -10,7 +10,8 @@
     "client": "cd ./client && ng serve",
     "run-both": "start node server.js & npm run-script client",
     "client-build": "cd ./client && ng build",
-    "client-test": "cd ./client && ng test"
+    "client-test": "cd ./client && ng test",
+    "install-all": "npm install && cd ./client && npm install"
   },
   "author": "STP",
   "license": "UNLICENSED",
