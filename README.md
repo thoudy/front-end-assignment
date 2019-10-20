@@ -29,7 +29,8 @@ The server has 2 endpoints:
 
 Be aware of backend errors!
 
---------------------------------------------
+## FOR REVIEWERS
+
 To install both:
 > `npm run-script install-all`
 
