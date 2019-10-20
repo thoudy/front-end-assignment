@@ -28,3 +28,23 @@ The server has 2 endpoints:
 `/articles/fashion` - returns a list of articles from `fashion` category
 
 Be aware of backend errors!
+
+--------------------------------------------
+To install both:
+> `npm run-script install-all`
+
+To launch client from main repo:
+> `npm run-script client`
+
+To build client from main repo:
+> `npm run-script client-build`
+
+To test client from main repo:
+> `npm run-script client-test`
+
+Or inside './client':
+
+> `npm install`
+> `npm start`
+> `npm run test`
+> `npm run build`
