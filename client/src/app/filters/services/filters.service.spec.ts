@@ -32,7 +32,7 @@ describe('FiltersService', () => {
     let articles = [
       {
         id: 1,
-        date: 'x',
+        date: { origin:'x', transformed: 'z' },
         image: 'z',
         category: 'category1',
         title: 'y',
@@ -40,7 +40,7 @@ describe('FiltersService', () => {
       },
       {
         id: 2,
-        date: 'x',
+        date: { origin:'x', transformed: 'z' },
         image: 'z',
         category: 'category2',
         title: 'y',
@@ -66,7 +66,7 @@ describe('FiltersService', () => {
     let articles = [
       {
         id: 1,
-        date: 'x',
+        date: { origin:'x', transformed: 'z' },
         image: 'z',
         category: 'category1',
         title: 'y',

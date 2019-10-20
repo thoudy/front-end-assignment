@@ -18,7 +18,7 @@ describe('ArticleDetailComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ArticleDetailComponent);
     component = fixture.componentInstance;
-    component.article = { id: 1, date: '1', category: 'a', title: 'b', image: 'x', preamble: 'd' };
+    component.article = { id: 1, date: {origin: 'x', transformed: 'y'}, category: 'a', title: 'b', image: 'x', preamble: 'd' };
     fixture.detectChanges();
   });
 

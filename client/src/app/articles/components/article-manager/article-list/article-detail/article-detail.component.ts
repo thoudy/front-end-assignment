@@ -12,8 +12,7 @@ export class ArticleDetailComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   private isImage() { 
     return this.article.image.length !== 0;

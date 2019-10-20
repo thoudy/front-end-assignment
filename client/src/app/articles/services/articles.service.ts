@@ -4,6 +4,7 @@ import { CONFIG } from 'src/app/config';
 import { forkJoin, of, Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { Article } from '../models/article.model';
+import { UtilsService } from 'src/app/utils/utils.service';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class ArticlesService {
       .pipe(
         map(response => {
           return response.map(el => {
-            return el.length === 0 ? [] : el.articles;
+            return el.length === 0 ? [] : this.mapArticleObject(el.articles);
           }).flat();
         })
       );
@@ -45,4 +46,21 @@ export class ArticlesService {
     }
     return requests;
   }
+
+  private mapArticleObject(data): Article[]{
+    return data.map(article => {
+      return {
+        id: article.id,
+        category: article.category,
+        title: article.title,
+        image: article.image,
+        date: {
+          origin: article.date,
+          transformed: UtilsService.convertDate(article.date, 'de')
+        },
+        preamble: article.preamble
+      }
+    })
+  }
+
 }

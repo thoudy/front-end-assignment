@@ -1,6 +1,9 @@
 export interface Article { 
     id: number,
-    date: string,
+    date: {
+        origin: string,
+        transformed: string
+    },
     image: string,
     category: string,
     title: string,
