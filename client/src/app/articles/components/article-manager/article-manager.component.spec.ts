@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, fakeAsync } from '@angular/core/testing';
 
 import { ArticleManagerComponent } from './article-manager.component';
 import { ArticlesService } from '../../services/articles.service';
@@ -6,6 +6,9 @@ import { ArticlesServiceStub } from '../../services/articles.service.stub';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleDetailComponent } from './article-list/article-detail/article-detail.component';
 import { Article } from '../../models/article.model';
+import { FiltersService } from 'src/app/filters/services/filters.service';
+import { Subject } from 'rxjs';
+import { FilterType } from 'src/app/filters/models/filter-type.model';
 
 describe('ArticleManagerComponent', () => {
   let component: ArticleManagerComponent;
@@ -15,7 +18,8 @@ describe('ArticleManagerComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       providers: [
-        {provide: ArticlesService, useClass: ArticlesServiceStub}
+        { provide: ArticlesService, useClass: ArticlesServiceStub },
+        FiltersService
       ],
       declarations: [
         ArticleManagerComponent,
@@ -36,27 +40,6 @@ describe('ArticleManagerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should receive three categories from service data stream', async(() => {
-    let fakeData = [{
-      "fashion": [{ id: 1, title: 'a' }]
-    },
-    {
-      "sport": [{ id: 2, title: 'b' }]
-    },
-    {
-      "sport": [{ id: 3, title: 'c' }]
-    }];
-    
-    articlesService.pushData(fakeData);
-    expect(fixture.componentInstance.getArticleList().length).toEqual(3);
-  }));
-
-  it('should return empty array when http request returns error', async(() => {
-    let fakeData = [];    
-    articlesService.pushData(fakeData);
-    expect(fixture.componentInstance.getArticleList().length).toEqual(0);
-  }));
 
   it('should display proper message when no articles are available', async(() => {
     let fakeData = [];

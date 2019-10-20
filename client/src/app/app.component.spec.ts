@@ -5,13 +5,15 @@ import { AppHeaderComponent } from './shared/components/header/header.component'
 import { AppFooterComponent } from './shared/components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticlesModule } from './articles/articles.module';
+import { FiltersModule } from './filters/filters.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         HttpClientModule,
-        ArticlesModule
+        ArticlesModule,
+        FiltersModule
       ],
       declarations: [
         AppComponent,
