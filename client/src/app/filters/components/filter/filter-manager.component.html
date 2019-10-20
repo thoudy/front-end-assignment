@@ -1,2 +1,4 @@
-<div>{{dataSource}}</div>
+<div>
+    <label class="data-source-label">{{dataSource}}</label>
+</div>
 <app-filters-list *ngIf="filters.length > 0" [filters]="filters" (filterVisibilityChangeRequest)="onFilterVisibilityChangeRequest($event)"></app-filters-list>

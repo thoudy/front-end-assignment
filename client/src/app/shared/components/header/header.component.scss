@@ -2,4 +2,19 @@
 
 .title {
     background-color: $main-color;
+    padding-bottom: 5px;
+}
+
+.header-title {
+    padding-top: 5px;
+}
+
+.header-quote {    
+    font-style: italic;
+    margin-bottom: 0px;
+    max-width: 375px;
+}
+
+.header-quote, .quote-signature {
+    padding-left: 25px;
 }
