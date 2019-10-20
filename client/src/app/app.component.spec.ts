@@ -6,6 +6,7 @@ import { AppFooterComponent } from './shared/components/footer/footer.component'
 import { HttpClientModule } from '@angular/common/http';
 import { ArticlesModule } from './articles/articles.module';
 import { FiltersModule } from './filters/filters.module';
+import { SortingModule } from './sorting/sorting.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -13,7 +14,8 @@ describe('AppComponent', () => {
       imports: [
         HttpClientModule,
         ArticlesModule,
-        FiltersModule
+        FiltersModule,
+        SortingModule
       ],
       declarations: [
         AppComponent,

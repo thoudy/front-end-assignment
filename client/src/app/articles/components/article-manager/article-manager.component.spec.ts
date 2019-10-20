@@ -7,8 +7,6 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleDetailComponent } from './article-list/article-detail/article-detail.component';
 import { Article } from '../../models/article.model';
 import { FiltersService } from 'src/app/filters/services/filters.service';
-import { Subject } from 'rxjs';
-import { FilterType } from 'src/app/filters/models/filter-type.model';
 
 describe('ArticleManagerComponent', () => {
   let component: ArticleManagerComponent;
@@ -51,9 +49,9 @@ describe('ArticleManagerComponent', () => {
 
   it('should display 3 articles from http request', async(() => {
     let fakeData: Article[] = [
-      { id: 1, title: 'a', image: 'b', category: 'c', date: 'd', preamble: 'e' },
-      { id: 2, title: 'a', image: 'b', category: 'c', date: 'd', preamble: 'e' },
-      { id: 3, title: 'a', image: 'b', category: 'c', date: 'd', preamble: 'e' }
+      { id: 1, title: 'a', image: 'b', category: 'c', date: {origin: 'd', transformed: 'd' }, preamble: 'e' },
+      { id: 2, title: 'a', image: 'b', category: 'c', date: {origin: 'd', transformed: 'd' }, preamble: 'e' },
+      { id: 3, title: 'a', image: 'b', category: 'c', date: {origin: 'd', transformed: 'd' }, preamble: 'e' }
     ];
     
     articlesService.pushData(fakeData);

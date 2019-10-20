@@ -6,6 +6,7 @@ import { AppHeaderComponent } from './components/header/header.component';
 import { ArticlesModule } from '../articles/articles.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FiltersModule } from '../filters/filters.module';
+import { SortingModule } from '../sorting/sorting.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FiltersModule } from '../filters/filters.module';
     CommonModule,
     ArticlesModule,
     FiltersModule,
-    HttpClientModule
+    HttpClientModule,
+    SortingModule
   ],
   exports: [
     AppHeaderComponent,
