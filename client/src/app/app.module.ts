@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { FiltersModule } from './filters/filters.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
     NgbModule,
     BrowserModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    FiltersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

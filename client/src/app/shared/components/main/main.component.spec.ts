@@ -5,6 +5,7 @@ import { AppHeaderComponent } from '../header/header.component';
 import { AppFooterComponent } from '../footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticlesModule } from 'src/app/articles/articles.module';
+import { FiltersModule } from 'src/app/filters/filters.module';
 
 describe('AppMainComponent', () => {
   let component: AppMainComponent;
@@ -14,7 +15,8 @@ describe('AppMainComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         HttpClientModule,
-        ArticlesModule
+        ArticlesModule,
+        FiltersModule
       ],
       declarations: [
         AppMainComponent,

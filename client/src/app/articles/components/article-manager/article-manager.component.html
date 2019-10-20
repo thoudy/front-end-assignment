@@ -1,5 +1,5 @@
-<div *ngIf="articleList.length !== 0; else noArticles">
-    <app-article-list [articles]="articleList"></app-article-list>
+<div *ngIf="activeArticleList.length !== 0; else noArticles">
+    <app-article-list [articles]="activeArticleList"></app-article-list>
 </div>
 <ng-template #noArticles>
     <div class="no-articles">

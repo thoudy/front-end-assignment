@@ -5,6 +5,7 @@ import { AppMainComponent } from './components/main/main.component';
 import { AppHeaderComponent } from './components/header/header.component';
 import { ArticlesModule } from '../articles/articles.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FiltersModule } from '../filters/filters.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     ArticlesModule,
-    HttpClientModule,
+    FiltersModule,
+    HttpClientModule
   ],
   exports: [
     AppHeaderComponent,
